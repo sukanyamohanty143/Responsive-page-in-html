@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif; /* Optional: Set a font family */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.box {
+    flex: 1 1 calc(30% - 20px); /* Adjust as needed for equal spacing */
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    position: relative;
+    height: 200px; /* Set the height */
+    width: calc(30% - 20px); /* Set the width */
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Customize background color and border for each section */
+.box:nth-child(1) {
+    background-color: #ffcccc;
+    border-color: #ff0000;
+}
+
+.box:nth-child(2) {
+    background-color: #ccffcc;
+    border-color: #00ff00;
+}
+
+.box:nth-child(3) {
+    background-color: #ccccff;
+    border-color: #0000ff;
+}
+
+
+@media screen and (max-width: 991px) {
+    .box {
+        flex: 1 1 48%; /* Adjust as needed for equal spacing */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .box {
+        flex: 1 0 100%; /* Each section takes up the entire row */
+        height: auto; /* Reset the height for mobile view */
+    }
+}
